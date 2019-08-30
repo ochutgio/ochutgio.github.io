@@ -68,12 +68,30 @@
 
 
     }
+
+    music = 0;
+    function getMusic() {
+      var audio = document.getElementById('audio');
+      music = (music + 1) % 2;
+      if (music) {
+        audio.setAttribute("autoplay", "true");
+      } else {
+        audio.setAttribute("autoplay", "false");
+      }
+
+    }
   </script>
 </head>
 
 <body>
 
-  <div style="text-align: right;padding: 15px;"><button class="classname" onclick="toggleShape()">Đổi kiểu</button>
+
+  <div style="text-align: right;padding: 15px;">
+    <audio id="audio" autoplay loop>
+      <source src="/music/music.mp3">
+    </audio>
+    <button class="classname" onclick="getMusic()">Nhạc</button>
+    <button class="classname" onclick="toggleShape()">Đổi kiểu</button>
     <button class="classname" onclick="togglePoint()">Đổi tâm</button></div>
 
   <div id="container">
