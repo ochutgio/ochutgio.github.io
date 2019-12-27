@@ -39,8 +39,8 @@
   
   <div style="text-align: right;padding: 15px; position: fixed; bottom: 0; right: 0;">
     <button id="btnMusic" class="button" onclick="playMusic()">Nhạc</button>
-    <button class="button" onclick="toggleShape()">Đổi kiểu</button>
-    <button class="button" onclick="togglePoint()">Đổi tâm</button>
+    <button class="button" onclick="toggleShape()">Đổi Kiểu</button>
+    <button class="button" onclick="togglePoint()">Đổi Tâm</button>
   </div>
 
 
@@ -114,10 +114,10 @@
       flagMusic = (flagMusic + 1) % 2;
       if (flagMusic) {
         audio.play();
-        btn.innerText = 'Tắt';
+        btn.innerText = 'Tắt Nhạc';
       } else {
         audio.pause();
-        btn.innerText = 'Nhạc';
+        btn.innerText = 'Bật Nhạc';
       }
     }
 
