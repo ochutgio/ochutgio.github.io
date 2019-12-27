@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 
 <html lang="vi">
 
@@ -9,76 +9,19 @@
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
   -->
-  <title> Some CSS</title>
+  <title>Mèo Bự <3 Mèo Ú</title>
   <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
 
-  <script type="text/javascript" charset="utf-8">
-    function hasClassName(inElement, inClassName) {
-      var regExp = new RegExp('(?:^|\\s+)' + inClassName + '(?:\\s+|$)');
-      return regExp.test(inElement.className);
-    }
 
-    function addClassName(inElement, inClassName) {
-      if (!hasClassName(inElement, inClassName))
-        inElement.className = [inElement.className, inClassName].join(' ');
-    }
-
-    function removeClassName(inElement, inClassName) {
-      if (hasClassName(inElement, inClassName)) {
-        var regExp = new RegExp('(?:^|\\s+)' + inClassName + '(?:\\s+|$)', 'g');
-        var curClasses = inElement.className;
-        inElement.className = curClasses.replace(regExp, ' ');
-      }
-    }
-
-    function toggleClassName(inElement, inClassName) {
-      if (hasClassName(inElement, inClassName))
-        removeClassName(inElement, inClassName);
-      else
-        addClassName(inElement, inClassName);
-    }
-
-    function toggleShape() {
-      var shape = document.getElementById('shape');
-      if (hasClassName(shape, 'ring')) {
-        removeClassName(shape, 'ring');
-        addClassName(shape, 'cube');
-      } else {
-        removeClassName(shape, 'cube');
-        addClassName(shape, 'ring');
-      }
-
-      var stage = document.getElementById('stage');
-      if (hasClassName(shape, 'ring'))
-        stage.style.webkitTransform = 'translateZ(-200px)';
-      else
-        stage.style.webkitTransform = '';
-    }
-
-    var flag = 0;
-    function togglePoint() {
-      var shape = document.getElementById('shape');
-      flag = (flag + 1) % 2;
-      if (flag) {
-
-        shape.setAttribute("style", "width: 1000px;");
-      } else {
-        shape.setAttribute("style", "width: 200px;");
-      }
-
-
-    }
-
-  </script>
 </head>
 
 <body>
 
-
+ 
   <div style="text-align: right;padding: 15px;">
-    <button class="classname" onclick="getMusic()">Nhạc</button>
-    <button class="classname" onclick="toggleShape()">Đổi kiểu</button>
-    <button class="classname" onclick="togglePoint()">Đổi tâm</button>
+    <button id="btnMusic" class="button" onclick="playMusic()">Nhạc</button>
+    <button class="button" onclick="toggleShape()">Đổi kiểu</button>
+    <button class="button" onclick="togglePoint()">Đổi tâm</button>
   </div>
 
   <div id="container">
@@ -99,13 +42,83 @@
       </div>
     </div>
   </div>
-  <script type="text/javascript">
-    function getMusic() {
-      var audio = new Audio('https://interactive-examples.mdn.mozilla.net/media/examples/t-rex-roar.mp3');
-      audio.play();
-    }
-  </script>
+
+  <audio id="myMusic" autoplay loop controls style="display: none;">
+    <source src="./sound/music.mp3" type="audio/mpeg">
+  </audio>
 
 </body>
+
+<script type="text/javascript" charset="utf-8">
+
+  function hasClassName(inElement, inClassName) {
+    var regExp = new RegExp('(?:^|\\s+)' + inClassName + '(?:\\s+|$)');
+    return regExp.test(inElement.className);
+  }
+
+  function addClassName(inElement, inClassName) {
+    if (!hasClassName(inElement, inClassName))
+      inElement.className = [inElement.className, inClassName].join(' ');
+  }
+
+  function removeClassName(inElement, inClassName) {
+    if (hasClassName(inElement, inClassName)) {
+      var regExp = new RegExp('(?:^|\\s+)' + inClassName + '(?:\\s+|$)', 'g');
+      var curClasses = inElement.className;
+      inElement.className = curClasses.replace(regExp, ' ');
+    }
+  }
+
+  function toggleClassName(inElement, inClassName) {
+    if (hasClassName(inElement, inClassName))
+      removeClassName(inElement, inClassName);
+    else
+      addClassName(inElement, inClassName);
+  }
+
+  function toggleShape() {
+    var shape = document.getElementById('shape');
+    if (hasClassName(shape, 'ring')) {
+      removeClassName(shape, 'ring');
+      addClassName(shape, 'cube');
+    } else {
+      removeClassName(shape, 'cube');
+      addClassName(shape, 'ring');
+    }
+
+    var stage = document.getElementById('stage');
+    if (hasClassName(shape, 'ring'))
+      stage.style.webkitTransform = 'translateZ(-200px)';
+    else
+      stage.style.webkitTransform = '';
+  }
+
+  var flag = 0;
+  function togglePoint() {
+    var shape = document.getElementById('shape');
+    flag = (flag + 1) % 2;
+    if (flag) {
+
+      shape.setAttribute("style", "width: 1000px;");
+    } else {
+      shape.setAttribute("style", "width: 200px;");
+    }
+
+  }
+
+  var flagMusic = 0;
+    function playMusic() {
+      var audio = document.getElementById('myMusic');
+      var btn = document.getElementById('btnMusic');
+      flagMusic = (flagMusic + 1) % 2;
+      if (flagMusic) {
+        audio.play();
+        btn.innerText = 'Tắt';
+      } else {
+        audio.pause();
+        btn.innerText = 'Nhạc';
+      }
+    }
+</script>
 
 </html>

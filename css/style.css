@@ -284,28 +284,27 @@ body {
 }
 
 /* CSS Button Đổi Kiểu */
-.classname {
+.button {
   
   display: inline-block;
   color: #333;
   font-family: 'Times New Roman', Times, serif;
-  font-size: 15px;
+  font-size: 13px;
   background: #f00;
   text-transform: capitalize;
   border-radius: 2px;
   color: #fff;
   border: none;
-  font-weight: 500;
-  font-size: 24px;
-
-  padding: 10px 22px;
+  font-weight: 400;
+  padding: 5px 15px;
+  text-transform: none;
   background-image: linear-gradient(45deg,   #5b33aa, transparent);
 }
-.classname:hover {
+.button:hover {
   background-color: #F34;
   cursor: pointer;
 }
-.classname:active {
+.button:active {
   position: relative;
   top: 1px;
 }
