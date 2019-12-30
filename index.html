@@ -18,7 +18,7 @@
 <body>
  
   <div style="text-align: right;padding: 15px;">
-    <button id="btnMusic" class="button" onclick="playMusic()">Bật Nhạc</button>
+    <button id="btnMusic" class="button" onclick="playMusic()">Tắt Nhạc</button>
     <button class="button" onclick="toggleShape()">Đổi Kiểu</button>
     <button class="button" onclick="togglePoint()">Đổi Tâm</button>
   </div>
@@ -107,7 +107,7 @@
 
   }
 
-  var flagMusic = 0;
+  var flagMusic = 1;
     function playMusic() {
       var audio = document.getElementById('myMusic');
       var btn = document.getElementById('btnMusic');
