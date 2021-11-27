@@ -150,123 +150,151 @@ body {
 #shape.cube > .three {
   opacity: 0.2;
   -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateY(90deg) translateZ(100px);
+  transform: scale3d(1.2, 1.2, 1.2) rotateY(90deg) translateZ(100px);
 }
 
 #shape.cube > .four {
   opacity: 0.2;
+  transform: scale3d(1.2, 1.2, 1.2) rotateY(180deg) translateZ(100px);
   -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateY(180deg) translateZ(100px);
 }
 
 #shape.cube > .five {
   opacity: 0.2;
+  transform: scale3d(1.2, 1.2, 1.2) rotateY(-90deg) translateZ(100px);
   -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateY(-90deg) translateZ(100px);
 }
 
 #shape.cube > .six {
   opacity: 0.2;
+  transform: scale3d(1.2, 1.2, 1.2) rotateX(-90deg) translateZ(100px) rotate(180deg);
   -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateX(-90deg) translateZ(100px) rotate(180deg);
 }
 
 #shape:hover.cube > .one {
   opacity: 0.9;
   -webkit-transform: scale3d(1.5, 1.5, 1.5) rotateX(90deg) translateZ(130px);
+  transform: scale3d(1.5, 1.5, 1.5) rotateX(90deg) translateZ(130px);
 }
 
 #shape:hover.cube > .two {
   opacity: 0.9;
   -webkit-transform: scale3d(1.5, 1.5, 1.5) translateZ(150px);
+  transform: scale3d(1.5, 1.5, 1.5) translateZ(150px);
 }
 
 #shape:hover.cube > .three {
   opacity: 0.9;
   -webkit-transform: scale3d(1.5, 1.5, 1.5) rotateY(90deg) translateZ(150px);
+  transform: scale3d(1.5, 1.5, 1.5) rotateY(90deg) translateZ(150px);
 }
 
 #shape:hover.cube > .four {
   opacity: 0.9;
   -webkit-transform: scale3d(1.5, 1.5, 1.5) rotateY(180deg) translateZ(150px);
+  transform: scale3d(1.5, 1.5, 1.5) rotateY(180deg) translateZ(150px);
 }
 
 #shape:hover.cube > .five {
   opacity: 0.9;
   -webkit-transform: scale3d(1.5, 1.5, 1.5) rotateY(-90deg) translateZ(150px);
+  transform: scale3d(1.5, 1.5, 1.5) rotateY(-90deg) translateZ(150px);
 }
 
 #shape:hover.cube > .six {
   opacity: 0.9;
   -webkit-transform: scale3d(1.5, 1.5, 1.5) rotateX(-90deg) translateZ(130px) rotate(180deg);
+  transform: scale3d(1.5, 1.5, 1.5) rotateX(-90deg) translateZ(130px) rotate(180deg);
 }
 
 #shape.cube > .seven {
   -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateX(90deg) translateZ(100px) rotate(180deg);
+  transform: scale3d(0.8, 0.8, 0.8) rotateX(90deg) translateZ(100px) rotate(180deg);
 }
 
 #shape.cube > .eight {
   -webkit-transform: scale3d(0.8, 0.8, 0.8) translateZ(100px);
+  transform: scale3d(0.8, 0.8, 0.8) translateZ(100px);
 }
 
 #shape.cube > .nine {
   -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateY(90deg) translateZ(100px);
+  transform: scale3d(0.8, 0.8, 0.8) rotateY(90deg) translateZ(100px);
 }
 
 #shape.cube > .ten {
   -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateY(180deg) translateZ(100px);
+  transform: scale3d(0.8, 0.8, 0.8) rotateY(180deg) translateZ(100px);
 }
 
 #shape.cube > .eleven {
   -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateY(-90deg) translateZ(100px);
+  transform: scale3d(0.8, 0.8, 0.8) rotateY(-90deg) translateZ(100px);
 }
 
 #shape.cube > .twelve {
   -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateX(-90deg) translateZ(100px);
+  transform: scale3d(0.8, 0.8, 0.8) rotateX(-90deg) translateZ(100px);
 }
 
 .ring > .one {
   -webkit-transform: translateZ(380px);
+  transform: translateZ(380px);
 }
 
 .ring > .two {
   -webkit-transform: rotateY(30deg) translateZ(380px);
+  transform: rotateY(30deg) translateZ(380px);
 }
 
 .ring > .three {
   -webkit-transform: rotateY(60deg) translateZ(380px);
+  transform: rotateY(60deg) translateZ(380px);
 }
 
 .ring > .four {
   -webkit-transform: rotateY(90deg) translateZ(380px);
+  transform: rotateY(90deg) translateZ(380px);
 }
 
 .ring > .five {
   -webkit-transform: rotateY(120deg) translateZ(380px);
+  transform: rotateY(120deg) translateZ(380px);
 }
 
 .ring > .six {
   -webkit-transform: rotateY(150deg) translateZ(380px);
+  transform: rotateY(150deg) translateZ(380px);
 }
 
 .ring > .seven {
   -webkit-transform: rotateY(180deg) translateZ(380px);
+  transform: rotateY(180deg) translateZ(380px);
 }
 
 .ring > .eight {
   -webkit-transform: rotateY(210deg) translateZ(380px);
+  transform: rotateY(210deg) translateZ(380px);
 }
 
 .ring > .nine {
   -webkit-transform: rotateY(-120deg) translateZ(380px);
+  transform: rotateY(-120deg) translateZ(380px);
 }
 
 .ring > .ten {
   -webkit-transform: rotateY(-90deg) translateZ(380px);
+  transform: rotateY(-90deg) translateZ(380px);
 }
 
 .ring > .eleven {
   -webkit-transform: rotateY(300deg) translateZ(380px);
+  transform: rotateY(300deg) translateZ(380px);
 }
 
 .ring > .twelve {
   -webkit-transform: rotateY(330deg) translateZ(380px);
+  transform: rotateY(330deg) translateZ(380px);
 }
 
 .controls {
